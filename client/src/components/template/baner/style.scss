@@ -1,0 +1,20 @@
+
+.banner{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        &__img{
+            max-width: 200px;
+        }
+        &__article{
+            max-width: 250px;
+          
+        }
+        &__text{
+            max-width: 200px;
+            text-align: center;
+            
+        }
+    }
+   
+

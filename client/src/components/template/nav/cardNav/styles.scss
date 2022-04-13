@@ -1,0 +1,25 @@
+.cardnav__aside{
+  width: 200px;
+}
+.dropDown {
+  height: 0;
+  visibility: hidden;
+  &__open {
+    height: auto;
+    visibility: visible;
+  }
+}
+
+
+.dropdown__name{
+  width: 180px;
+  border-bottom: 1px solid black;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.dropdown__list{
+  font-size: 12px;
+  
+  
+}

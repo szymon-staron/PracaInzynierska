@@ -1,0 +1,23 @@
+.login {
+  max-width: 350px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.login__title {
+  text-align: center;
+}
+
+.login__fieldset {
+  text-align: center;
+  border-style: none;
+}
+.register__link {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  font-style: italic;
+  a {
+    font-size: 13px;
+  }
+}
