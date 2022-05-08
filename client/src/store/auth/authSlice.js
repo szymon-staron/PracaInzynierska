@@ -11,10 +11,20 @@ export const authSlice = createSlice({
     name: 'auth',
     initialState,
     reducers: {
+        getUserFromLocalStorage: (state) => {
+            const user = localStorage.getItem('authDetails');
+            console.log(user);
+            if (user) {
+                state.user = user;
+                state.isAuthenticated = true;
+            }
+        },
         userLoading: (state) => {
             state.loading = true;
         },
         userLoaded: (state, action) => {
+            const serializedState = JSON.stringify(action.payload);
+            localStorage.setItem('authDetails', serializedState);
             state.user = action.payload;
         },
         setToken: (state, action) => {
@@ -43,6 +53,7 @@ export const {
     loginRequest,
     loginSuccess,
     userLoaded,
+    getUserFromLocalStorage,
 } = authSlice.actions;
 
 export default authSlice.reducer;

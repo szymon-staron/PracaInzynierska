@@ -33,10 +33,9 @@ export const Login = () => {
             dispatch(setToken(token));
             dispatch(loginSuccess());
             const { result } = await client('users/validate-Token', token);
-            console.log(result);
+
             if (result) {
                 navigate('/account/user');
-                console.log('test');
                 dispatch(userLoaded(result));
             }
         }

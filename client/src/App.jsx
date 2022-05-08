@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { MainLayout } from './components/layout';
 import { PrivateRoute } from './components/routing/privateRoute';
@@ -12,8 +12,16 @@ import {
   PageNoFound,
   Basket,
 } from './components/view';
+import { getUserFromLocalStorage } from './store/auth/authSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 const App = () => {
+  const { user } = useSelector((state) => state.auth);
+
+  const dispatch = useDispatch();
+
+  dispatch(getUserFromLocalStorage());
+
   return (
     <MainLayout>
       <Routes>

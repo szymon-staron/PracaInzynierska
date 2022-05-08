@@ -1,0 +1,51 @@
+.link {
+    text-align: center;
+    padding: 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+
+    max-width: 200px;
+    transition: 0.3s ease-in all;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.12);
+    }
+}
+
+.active {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+.list {
+    width: 250px;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.219);
+}
+
+.userPanel {
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    display: flex;
+    width: 1000px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.container {
+    padding: 24px;
+}
+
+.accountPage {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.option {
+    padding: 12px;
+    display: none;
+    width: 100%;
+}
+
+.show {
+    display: block;
+}
