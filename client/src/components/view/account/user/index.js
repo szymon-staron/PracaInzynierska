@@ -12,14 +12,14 @@ export const User = () => {
     return (
         <div className="container">
             <div className="accountPage">
-                <h3>User Panel</h3>
+                <h3>Konto użytkownika</h3>
                 <div className="userPanel">
                     <ul className="list">
                         <li
                             className={classNames('link', { active: activePage === 'data' })}
                             onClick={() => handleOpenOption('data')}
                         >
-                            Dane
+                            Dane użytkownika
                         </li>
                         <li
                             className={classNames('link', {
@@ -29,7 +29,7 @@ export const User = () => {
                         >
                             Historia zamówień
                         </li>
-                        <li className="link">Wyloguj</li>
+                        <li className="link">Wyloguj się</li>
                     </ul>
                     <div
                         className={classNames('option', { show: activePage === 'data' })}

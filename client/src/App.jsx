@@ -8,6 +8,7 @@ import {
   User,
   Home,
   Shop,
+  Product,
   Contact,
   PageNoFound,
   Basket,
@@ -27,6 +28,7 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/shop" element={<Shop />} />
+        <Route exact path="/shop/product" element={<Product />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/basket" element={<Basket />} />
         <Route exact path="/account/register" element={<Register />} />

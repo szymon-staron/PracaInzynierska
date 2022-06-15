@@ -197,3 +197,76 @@ export const priceSchema = [
         label: '1100+ zł '
     },
 ];
+
+export const PersonalDataSchema = [
+    {
+        type: 'text',
+        label: 'Imię',
+        name: 'firstName',
+    },
+    {
+        type: 'text',
+        label: 'Nazwisko',
+        name: 'lastName',
+    },
+    {
+        type: 'email',
+        label: 'Email',
+        name: 'email',
+    },
+    {
+        type: 'text',
+        label: 'Telefon',
+        name: 'telefon',
+    },
+    {
+        type: 'text',
+        label: 'Adres',
+        name: 'Adres',
+    },
+    {
+        type: 'text',
+        label: 'Miasto',
+        name: 'miasto',
+    },
+    {
+        type: 'text',
+        label: 'Wojewodztwo',
+        name: 'wojewodztwo',
+    },
+    {
+        type: 'text',
+        label: 'Kod pocztowy',
+        name: 'kod',
+    },
+    {
+        type: 'text',
+        label: 'Kraj',
+        name: 'kraj',
+    },
+
+];
+
+export const ContactDataSchema = [
+    {
+        type: 'text',
+        label: 'Imię',
+        name: 'firstName',
+    },
+    {
+        type: 'text',
+        label: 'Nazwisko',
+        name: 'lastName',
+    },
+    {
+        type: 'email',
+        label: 'Email',
+        name: 'email',
+    },
+    {
+        type: 'text',
+        label: 'Wiadomość',
+        name: 'message',
+    },
+
+];
