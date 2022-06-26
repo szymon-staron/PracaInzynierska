@@ -1,0 +1,52 @@
+.basketitem {
+    display: flex;
+    max-height: 150px;
+    justify-content: center;
+    align-items: center;
+
+    &__img {
+        max-width: 80px;
+    }
+
+    &__size {
+        margin: 5px;
+    }
+
+    &__price {
+        margin: 5px;
+    }
+
+    &__name {
+        font-size: 15px;
+        text-align: center;
+        margin: 5px;
+    }
+}
+
+.basketedit {
+    &__plus {
+        cursor: pointer;
+        margin-right: 5px;
+
+        padding: 5px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.288);
+        background-color: rgba(0, 0, 0, 0.123);
+    }
+
+    &__quantity {
+        margin-right: 5px;
+        font-size: 20px;
+    }
+
+    &__minus {
+        cursor: pointer;
+        border: 1px solid black;
+        padding: 6px;
+        padding-left: 7px;
+        border-radius: 8px;
+        padding-right: 7px;
+        border: 1px solid rgba(0, 0, 0, 0.288);
+        background-color: rgba(0, 0, 0, 0.123);
+    }
+}

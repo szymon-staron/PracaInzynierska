@@ -1,14 +1,13 @@
-import { React } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { Card } from 'components/template/card';
-import './style.scss';
-
+import { React, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Card } from "components/template/card";
+import { inventoryData } from "store/inventory/inventorySlice";
+import "./style.scss";
 
 export const Shop = () => {
-    const { rolls } = useSelector((state) => state.inventory);
-    console.log(rolls);
-    return <div className='shop'>
-        <Card></Card>
-
-    </div>;
+    return (
+        <div className="shop">
+            <Card></Card>
+        </div>
+    );
 };

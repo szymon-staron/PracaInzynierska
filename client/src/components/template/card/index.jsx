@@ -1,14 +1,20 @@
-import React from 'react';
-import { CardNav } from '../nav/cardNav';
-import { Product } from '../product';
-import './style.scss';
+import React from "react";
+import { CardNav } from "../nav/cardNav";
+import { Product } from "../product";
+import { useSelector } from "react-redux";
+import "./style.scss";
 
 export const Card = () => {
+    const { rolls } = useSelector((state) => state.inventory);
+
+    const displayProduct = rolls.map((roll) => (
+        <Product {...roll} id={roll._id} />
+    ));
+
     return (
         <div className="card">
-            <div className="card__top">test</div>
             <CardNav />
-            <div className="card__container"> <Product /><Product /><Product /><Product /><Product /><Product /><Product /><Product /><Product /><Product /><Product /><Product /><Product /><Product /><Product /><Product /><Product /><Product /><Product /><Product /></div>
+            <div className="card__container">{displayProduct}</div>
         </div>
     );
 };

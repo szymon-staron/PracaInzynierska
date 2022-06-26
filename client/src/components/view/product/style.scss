@@ -1,5 +1,5 @@
 .cont {
-    max-width: 1000px;
+    max-width: 800px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,15 +18,13 @@
 
 
     &__div {
-        max-width: 500px;
-
+        max-width: 650px;
     }
 
     &__img {
-        padding: 20px;
+        padding: 10px;
         border-radius: 4px;
-        width: 100%;
-
+        max-width: 650px;
     }
 
     &__name {
@@ -43,11 +41,11 @@
 
     &__description {
         width: 300px;
-        height: 150px;
+        max-height: 300px;
         border: 2px solid rgba(0, 0, 0, 0.336);
         text-align: center;
         line-height: 50px;
-        border-radius: 16px;
+        overflow-y: scroll;
     }
 
     &__size {
@@ -72,8 +70,8 @@
     }
 
     &__button {
-
         justify-content: center;
         width: 250px;
+        border: 2px solid rgba(0, 0, 0, 0.336);
     }
 }

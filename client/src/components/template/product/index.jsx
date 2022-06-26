@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { NavLink } from "react-router-dom";
 import "./style.scss";
 
 export const Product = ({
@@ -11,10 +12,14 @@ export const Product = ({
     discount,
     category,
 }) => {
-    return <div className='products'>
-        <img className='products__img' src="https://cdn.shopify.com/s/files/1/0481/1119/0176/products/PR4047BI16686_908337_36270_Next_Outback_150_SZ4_353x400.jpg?v=1636561220" alt="" />
-        <p className='products__size'>ROZMARY: 35,5 - 44</p>
-        <h1 className='products__name'>Rolki Super modle 12 15 / 13 -black</h1>
-        <p className='products__price'>666,66 zł</p>
-    </div>;
+    return (
+        <div className="products">
+            <NavLink to={`/shop/product/:${id}`} className="products_link">
+                <img className="products__img" src={image} alt={name} />
+                <p className="products__size">ROZMARY: {size[0]}</p>
+                <h1 className="products__name">{name}</h1>
+                <p className="products__price">{price} zł</p>
+            </NavLink>
+        </div>
+    );
 };
