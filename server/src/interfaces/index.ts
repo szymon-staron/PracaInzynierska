@@ -1,4 +1,5 @@
-export { ICart, ICartModel } from './cart';
-export { IInventory, IInventoryModel } from './inventory';
-export { IReview, IReviewModel } from './reviews';
-export { IUser, IUserDocument, IUserModel } from './user';
+export * from './cart';
+export * from './inventory';
+export * from './reviews';
+export * from './user';
+export * from './order';

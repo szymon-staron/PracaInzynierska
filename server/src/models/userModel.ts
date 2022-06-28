@@ -15,16 +15,14 @@ const UserSchema = new Schema<IUserDocument, IUserModel>(
     city: { type: String },
     state: { type: String },
     code: { type: String },
-    country: { type: String },
+    country: { type: String }
   },
   {
-    timestamps: true,
+    timestamps: true
   }
 );
 
-UserSchema.statics.addUser = async function (
-  userToAdd: IUserDocument | { email: string; regulations: boolean }
-) {
+UserSchema.statics.addUser = async function (userToAdd: IUserDocument | { email: string; regulations: boolean }) {
   const user = new this(userToAdd);
   return await user.save();
 };
@@ -46,18 +44,16 @@ UserSchema.methods.comparePassword = function (candidatePassword: string) {
   return;
 };
 
-UserSchema.statics.updateHashedPassword = async function (
-  id: string,
-  password: string
-) {
+UserSchema.statics.updateHashedPassword = async function (id: string, password: string) {
   const salt = await bcryptjs.genSalt(10);
   const newPassword = await bcryptjs.hash(password, salt);
   await this.findByIdAndUpdate(id, { password: newPassword });
 };
-UserSchema.statics.updateAccount = async function (
-  _id: string,
-  updateDate: IUser
-) {
+UserSchema.statics.updateAccount = async function (_id: string, updateDate: IUser) {
+  return await this.findOneAndUpdate({ _id }, { ...updateDate });
+};
+
+UserSchema.statics.updateAccount = async function (_id: string, updateDate: IUser) {
   return await this.findOneAndUpdate({ _id }, { ...updateDate });
 };
 
