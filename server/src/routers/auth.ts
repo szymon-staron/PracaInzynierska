@@ -4,8 +4,15 @@ import { validate } from "../validator";
 import { AuthController } from "../controllers";
 
 const router = Router();
-const { register, login, getUser, activation, forgetPassword, resetPassword } =
-  AuthController;
+const {
+  register,
+  login,
+  getUser,
+  activation,
+  forgetPassword,
+  resetPassword,
+  updateData,
+} = AuthController;
 
 const {
   validateLogin,
@@ -24,5 +31,6 @@ router.post(
   extractJWT,
   resetPassword
 );
+router.post("/users/update", extractJWT, updateData);
 
 export = router;

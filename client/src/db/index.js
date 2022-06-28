@@ -215,32 +215,32 @@ export const PersonalDataSchema = [
     {
         type: "text",
         label: "Telefon",
-        name: "telefon",
+        name: "contact",
     },
     {
         type: "text",
         label: "Adres",
-        name: "Adres",
+        name: "adress",
     },
     {
         type: "text",
         label: "Miasto",
-        name: "miasto",
+        name: "city",
     },
     {
         type: "text",
         label: "Wojewodztwo",
-        name: "wojewodztwo",
+        name: "state",
     },
     {
         type: "text",
         label: "Kod pocztowy",
-        name: "kod",
+        name: "code",
     },
     {
         type: "text",
         label: "Kraj",
-        name: "kraj",
+        name: "country",
     },
 ];
 

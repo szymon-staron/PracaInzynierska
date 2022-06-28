@@ -1,5 +1,5 @@
-import { Schema, model } from 'mongoose';
-import { IMessage, IMessageModel } from '../interfaces/message';
+import { Schema, model } from "mongoose";
+import { IMessage, IMessageModel } from "../interfaces/message";
 
 const MessageSchema: Schema = new Schema(
   {
@@ -9,10 +9,10 @@ const MessageSchema: Schema = new Schema(
     guests: { type: Number, required: true },
     date: { type: String, required: true },
     time: { type: String, required: true },
-    message: { type: String, required: true }
+    message: { type: String, required: true },
   },
   {
-    timestamps: true
+    timestamps: true,
   }
 );
 
@@ -21,6 +21,6 @@ MessageSchema.statics.addMessage = async function (messageToAdd: IMessage) {
   return await message.save();
 };
 
-const MessageModel = model<IMessage, IMessageModel>('Message', MessageSchema);
+const MessageModel = model<IMessage, IMessageModel>("Message", MessageSchema);
 
 export default MessageModel;
